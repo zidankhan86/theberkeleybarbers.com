@@ -1,0 +1,55 @@
+@media screen and (max-width:767px) {
+    .main-banner .caption {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:768px) {
+    .office_time {
+        max-width: 253px;
+        text-align: start;
+        float: inline-end;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .main-banner .caption p {
+        padding: 10px 12px;
+        border-radius: 1px;
+        font-size: 20px;
+        margin: auto;
+    }
+
+    .about_content h2 {
+        font-size: 25px;
+    }
+
+    .about_content .desc {
+        font-size: 18px;
+    }
+
+    .about_content h5 {
+        font-size: 20px;
+    }
+
+    .about_content p {
+        font-size: 18px;
+    }
+
+    .section_heading h2 {
+        font-size: 28px;
+    }
+
+    .team_item .content h4 {
+        font-size: 22px;
+    }
+
+    .team_item .content p {
+        font-size: 16px;
+    }
+
+    .primary-btn {
+        font-size: 16px;
+    }
+}
