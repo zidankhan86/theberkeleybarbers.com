@@ -14,7 +14,7 @@ ul {
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -155,14 +155,15 @@ h6 {
 }
 
 .offcanvas ul li a {
-    color: #fff;
+    color: #fff !important;
     text-align: center;
     font-family: 'avenir-Light';
     font-size: 20px;
 }
 
-.offcanvas ul li a:hover {
-    color: var(--primary);
+.offcanvas ul li a:hover,
+.offcanvas ul li a:focus {
+    color: var(--primary) !important;
 }
 
 /* Base offcanvas transition */
@@ -240,9 +241,9 @@ banner
     border: 2px solid var(--primary);
     border-radius: 100px;
     justify-content: center;
-    padding: 15px 50px;
+    padding: 12px 49px;
     font-family: "Barlow Condensed", sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     position: relative;
     display: inline-block;
@@ -263,7 +264,7 @@ banner
     margin: auto;
 }
 
- 
+
 .about_content h2 {
     font-size: 36px;
     color: #ffffff;
@@ -311,8 +312,8 @@ banner
     text-transform: uppercase;
     margin-top: 20px;
     font-family: Barlow Condensed, sans-serif;
-    font-size: 35px;
-    font-weight: 700;
+    font-size: 26px;
+    font-weight: 500;
 }
 
 .team_item .content p {
@@ -327,6 +328,9 @@ banner
 .team_item .primary-btn:hover {
     background: var(--primary) !important;
 }
+
+
+
 
 .contact p {
     margin: 0;
@@ -401,4 +405,71 @@ banner
     display: block;
     border-radius: 8px;
     transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.masonry-gallery a:hover img {
+    transform: scale(1.05);
+    opacity: 0.9;
+}
+
+#bookingModal .modal-content {
+    background: #253a4b;
+    color: #fff;
+}
+
+#bookingModal .modal-header {
+    border: none;
+    padding: 25px;
+}
+
+#bookingModal .modal-header .btn-close {
+    border: none;
+    box-shadow: none;
+    background-image: none;
+}
+
+#bookingModal .modal-body {
+    padding: 25px;
+    padding-top: 0;
+}
+
+#bookingModal .form-control {
+    background-color: transparent;
+    border: 1px solid #777676;
+    border-radius: 1px;
+    padding: 14px;
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+#bookingModal .form-control:focus,
+#bookingModal .form-control,
+select {
+    color: #fff;
+}
+
+#bookingModal .form-control::placeholder {
+    color: #888;
+}
+
+/* Make native date/time picker icons white */
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    /* turns dark to white */
+    opacity: .85;
+}
+
+/* Firefox uses a different pseudo-element */
+input[type="date"]::-moz-calendar-picker-indicator,
+input[type="time"]::-moz-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.google-reviews {
+    height: 637px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    background: #fff;
+    padding: 4px;
 }

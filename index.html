@@ -18,13 +18,6 @@
 
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
-    <style>
-        /* Hover effect */
-        .masonry-gallery a:hover img {
-            transform: scale(1.05);
-            opacity: 0.9;
-        }
-    </style>
 
 </head>
 
@@ -60,34 +53,34 @@
                 </div>
             </div>
         </div>
-    </header>
 
-    <!-- Mobile Offcanvas Menu -->
-    <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
-        <div class="offcanvas-header">
-            <button type="button" class="btn-close border-0 shadow-none text-reset text-white opacity-100"
-                data-bs-dismiss="offcanvas" aria-label="Close">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
-                    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="lucide lucide-x-icon lucide-x">
-                    <path d="M18 6 6 18" />
-                    <path d="m6 6 12 12" />
-                </svg>
-            </button>
+
+        <!-- Mobile Offcanvas Menu -->
+        <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close border-0 shadow-none text-reset text-white opacity-100"
+                    data-bs-dismiss="offcanvas" aria-label="Close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                        stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-x-icon lucide-x">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav">
+                    <li class="nav-item scroll-to-section"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item scroll-to-section"><a class="nav-link" href="#about">About Us</a></li>
+                    <li class="nav-item scroll-to-section"><a class="nav-link" href="#service">Services</a></li>
+                    <li class="nav-item scroll-to-section"><a class="nav-link" href="#team">Meet the Team</a></li>
+                    <li class="nav-item scroll-to-section"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item scroll-to-section"><a class="nav-link" href="#memorabilia">Our Barber
+                            Memorabilia</a></li>
+                    <li class="nav-item scroll-to-section"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-        <div class="offcanvas-body">
-            <ul class="navbar-nav">
-                <li class="nav-item scroll-to-section"><a class="nav-link active" href="#home">Home</a></li>
-                <li class="nav-item scroll-to-section"><a class="nav-link" href="#about">About Us</a></li>
-                <li class="nav-item scroll-to-section"><a class="nav-link" href="#service">Services</a></li>
-                <li class="nav-item scroll-to-section"><a class="nav-link" href="#team">Meet the Team</a></li>
-                <li class="nav-item scroll-to-section"><a class="nav-link" href="#gallery">Gallery</a></li>
-                <li class="nav-item scroll-to-section"><a class="nav-link" href="#memorabilia">Our Barber
-                        Memorabilia</a></li>
-                <li class="nav-item scroll-to-section"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </div>
     </header>
 
     <div class="main-banner" id="home">
@@ -105,7 +98,8 @@
                         and expert barbering - classic cuts to fades
                     </p>
                     <div class="main-button scroll-to-section">
-                        <a href="#" class="primary-btn">Book Now</a>
+                        <a href="#" class="primary-btn" data-bs-toggle="modal" data-bs-target="#bookingModal">Book
+                            Now</a>
                     </div>
                 </div>
             </div>
@@ -302,57 +296,71 @@
                 <h2>Meet Our Team</h2>
             </div>
 
-            <div class="row gy-3 gy-lg-0 text-center text-md-start">
-                <div class="col-md-6 col-lg-4">
+            <div
+                class="row gy-5 gy-lg-0 row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-4 text-center text-md-start">
+                <div class="col">
                     <div class="team_item card h-100 border-0 bg-transparent">
-                        <div class="mb-3">
-                            <img src="assets/image/team1.jpg" class="img-fluid rounded-3" alt="Barber Andrew Helinski">
+                        <div class="mb-2 team_img">
+                            <img src="assets/image/team1.png" class="img-fluid rounded-3" alt="Barber Andrew Helinski">
                         </div>
-                        <div class="content">
-                            <h4 class="mb-2">Andrew  <small>(He/Him)</small></h4>
-                            <p>
-                                With over 10 years of experience, Andrew specializes in modern fades, beard detailing,
-                                and classic cuts.
-                                His precision and attention to detail have made him a client favorite for timeless looks
-                                with a modern edge.
-                            </p>
-                            <a href="#" class="primary-btn bg-transparent">Book Now</a>
+                        <div class="card-body">
+                            <div class="content">
+                                <h4 class="mb-4">Edna</small></h4>
+                            </div>
+                        </div>
+                        <div class="card-footer mt-auto border-0 p-0 bg-transparent">
+                            <a href="#" class="primary-btn bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#bookingModal">Book Now</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col">
                     <div class="team_item card h-100 border-0 bg-transparent">
-                        <div class="mb-3">
-                            <img src="assets/image/team2.jpg" class="img-fluid rounded-3" alt="Barber Warren Forgie">
+                        <div class="mb-2 team_img">
+                            <img src="assets/image/team2.png" class="img-fluid rounded-3" alt="Barber Warren Forgie">
                         </div>
-                        <div class="content">
-                            <h4 class="mb-2">Warren Forgie <small>(He/Him)</small></h4>
-                            <p>
-                                With over 10 years of experience, Andrew specializes in modern fades, beard detailing,
-                                and classic cuts.
-                                His precision and attention to detail have made him a client favorite for timeless looks
-                                with a modern edge.
-                            </p>
-                            <a href="#" class="primary-btn bg-transparent">Book Now</a>
+                        <div class="card-body">
+                            <div class="content">
+                                <h4 class="mb-4">Tom</small></h4>
+                            </div>
+                        </div>
+                        <div class="card-footer mt-auto border-0 p-0 bg-transparent">
+                            <a href="#" class="primary-btn bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#bookingModal">Book Now</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col">
                     <div class="team_item card h-100 border-0 bg-transparent">
-                        <div class="mb-3">
-                            <img src="assets/image/team3.jpg" class="img-fluid rounded-3" alt="Barber Kristyn King">
+                        <div class="mb-2 team_img">
+                            <img src="assets/image/team3.png" class="img-fluid rounded-3" alt="Barber Kristyn King">
                         </div>
-                        <div class="content">
-                            <h4 class="mb-2">Kristyn King <small>(She/Her)</small></h4>
-                            <p>
-                               With over 10 years of experience, Andrew specializes in modern fades, beard detailing,
-                                and classic cuts.
-                                His precision and attention to detail have made him a client favorite for timeless looks
-                                with a modern edge.
-                            </p>
-                            <a href="#" class="primary-btn bg-transparent">Book Now</a>
+                        <div class="card-body">
+                            <div class="content">
+                                <h4 class="mb-4">Frank</small></h4>
+                            </div>
+                        </div>
+                        <div class="card-footer mt-auto border-0 p-0 bg-transparent">
+                            <a href="#" class="primary-btn bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#bookingModal">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="team_item card h-100 border-0 bg-transparent">
+                        <div class="mb-2 team_img">
+                            <img src="assets/image/no-image.png" class="img-fluid rounded-3" alt="Barber Kristyn King">
+                        </div>
+                        <div class="card-body">
+                            <div class="content">
+                                <h4 class="mb-4">Tony</small></h4>
+                            </div>
+                        </div>
+                        <div class="card-footer mt-auto border-0 p-0 bg-transparent">
+                            <a href="#" class="primary-btn bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#bookingModal">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -369,35 +377,116 @@
                 <h2>Gallery</h2>
             </div>
 
-            <div id="lightgallery" class="masonry-gallery">
-                <a href="assets/image/gallery/1.jpg">
-                    <img src="assets/image/gallery/1.jpg" alt="Gallery Image 1">
+            <div id="lightgallery2" class="masonry-gallery">
+                <a href="assets/image/2.png">
+                    <img src="assets/image/2.png" alt="Image 1">
                 </a>
-                <a href="assets/image/gallery/2.jpg">
-                    <img src="assets/image/gallery/2.jpg" alt="Gallery Image 2">
+                <a href="assets/image/3.png">
+                    <img src="assets/image/3.png" alt="Image 2">
                 </a>
-                <a href="assets/image/gallery/3.jpg">
-                    <img src="assets/image/gallery/3.jpg" alt="Gallery Image 3">
+                <a href="assets/image/4.png">
+                    <img src="assets/image/4.png" alt="Image 3">
                 </a>
-                <a href="assets/image/gallery/4.jpg">
-                    <img src="assets/image/gallery/4.jpg" alt="Gallery Image 4">
+                <a href="assets/image/5.png">
+                    <img src="assets/image/5.png" alt="Image 1">
                 </a>
-                <a href="assets/image/gallery/5.jpg">
-                    <img src="assets/image/gallery/5.jpg" alt="Gallery Image 5">
+                <a href="assets/image/6.png">
+                    <img src="assets/image/6.png" alt="Image 2">
                 </a>
-                <a href="assets/image/gallery/6.jpg">
-                    <img src="assets/image/gallery/6.jpg" alt="Gallery Image 6">
+                <a href="assets/image/7.png">
+                    <img src="assets/image/7.png" alt="Image 3">
                 </a>
-                <a href="assets/image/gallery/7.jpg">
-                    <img src="assets/image/gallery/7.jpg" alt="Gallery Image 7">
+                <a href="assets/image/8.png">
+                    <img src="assets/image/8.png" alt="Image 2">
                 </a>
-                <a href="assets/image/gallery/8.jpg">
-                    <img src="assets/image/gallery/8.jpg" alt="Gallery Image 8">
+                <a href="assets/image/9.png">
+                    <img src="assets/image/9.png" alt="Image 3">
                 </a>
             </div>
         </div>
     </div>
     <!-- gallery -->
+
+
+
+    <!-- review -->
+    <div class="review-section pt-5">
+        <div class="container">
+
+            <div class="section_heading mb-5">
+                <h2>What Our Customers Say</h2>
+            </div>
+
+            <div class="row gy-4 gy-lg-0 align-items-center d-flex align-items-center">
+                <!-- Left: Business Video -->
+                <div class="col-lg-6">
+                    <div class="video-wrapper ratio ratio-1x1">
+                        <iframe width="100%" height="500"
+                            src="https://www.youtube.com/embed/sEs05pcXjbc?si=eDlyOYBaL4kxaPVY"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Right: Google Reviews -->
+                <div class="col-lg-6">
+                    <div class="google-reviews">
+                        <script src="https://elfsightcdn.com/platform.js" async></script>
+                        <div class="elfsight-app-ba796f00-477b-4a13-a33b-50d3ac13befd" data-elfsight-app-lazy></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- review -->
+
+    <!-- Our Barber Memorabilia -->
+    <div class="team-section pt-5" id="memorabilia">
+        <div class="container">
+            <div class="section_heading mb-5">
+                <h2>Our Barber Memorabilia</h2>
+            </div>
+
+            <div id="lightgallery" class="masonry-gallery">
+                <a href="assets/image/gallery/5.png">
+                    <img src="assets/image/gallery/5.png" alt="Gallery Image 1">
+                </a>
+                <a href="assets/image/gallery/2.png">
+                    <img src="assets/image/gallery/2.png" alt="Gallery Image 2">
+                </a>
+                <a href="assets/image/gallery/3.png">
+                    <img src="assets/image/gallery/3.png" alt="Gallery Image 3">
+                </a>
+                <a href="assets/image/gallery/4.png">
+                    <img src="assets/image/gallery/4.png" alt="Gallery Image 4">
+                </a>
+                <a href="assets/image/gallery/5.png">
+                    <img src="assets/image/gallery/5.png" alt="Gallery Image 5">
+                </a>
+                <a href="assets/image/gallery/6.png">
+                    <img src="assets/image/gallery/6.png" alt="Gallery Image 6">
+                </a>
+                <a href="assets/image/gallery/7.png">
+                    <img src="assets/image/gallery/7.png" alt="Gallery Image 7">
+                </a>
+                <a href="assets/image/gallery/8.png">
+                    <img src="assets/image/gallery/8.png" alt="Gallery Image 8">
+                </a>
+                <a href="assets/image/gallery/2.png">
+                    <img src="assets/image/gallery/2.png" alt="Gallery Image 6">
+                </a>
+                <a href="assets/image/gallery/11.png">
+                    <img src="assets/image/gallery/11.png" alt="Gallery Image 7">
+                </a>
+                <a href="assets/image/gallery/10.png">
+                    <img src="assets/image/gallery/10.png" alt="Gallery Image 8">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Our Barber Memorabilia -->
 
 
     <!-- contact -->
@@ -406,40 +495,101 @@
             <div class="section_heading mb-5">
                 <h2>Contact</h2>
             </div>
-
-            <div class="row gy-5 gy-md-0 d-flex justify-content-between text-center text-md-start">
-                <div class="col-md-6">
-                    <div class="contact"> 
+            <div class="row  d-flex align-items-center justify-content-center text-center">
+                <div class="col-12 mb-4">
+                    <div class="contact">
                         <img src="assets/image/logo.png" class="img-fluid mb-4" alt="Logo">
                         <p>
-                            2812 Santa Monica Blvd. <br>
-                            Santa Monica, CA 90404 <br>
-                            (310) 828 1111
+                            2812 Santa Monica Blvd <br>
+                            Santa Monica, Los Angeles County 90404 <br>
+                            USA
+                            (310) 828-1111
                         </p>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-12">
                     <div class="office_time">
                         <h5>Hours</h5>
                         <p>
-                            Monday 8am – 5pm <br>
-                            Tuesday 8am – 5pm <br>
-                            Wednesday 8am – 5pm <br>
-                            Thursday 8am – 5pm <br>
-                            Friday 8am – 5pm <br>
-                            Saturday 8am – 6pm <br>
-                            Sunday 9am – 4pm
+                            Monday - Saturday | 8AM - 6PM <br>
+                            Sunday | 9AM - 4PM
                         </p>
                     </div>
                 </div>
             </div>
-
 
         </div>
     </div>
     <!-- contact -->
 
 
+    <!-- Booking Modal -->
+    <div class="modal fade" id="bookingModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Book Your Appointment</h1>
+                    <button type="button" class="btn-close bg-transparent" data-bs-dismiss="modal" aria-label="Close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="lucide lucide-x-icon lucide-x">
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+                        <div class="row g-3">
+                            <!-- Name & Phone -->
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Full Name <span class="req">*</span></label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your fullname"
+                                    required />
+                                <div class="invalid-feedback">Please enter your name.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone <span class="req">*</span></label>
+                                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number"
+                                    required />
+                                <div class="invalid-feedback">Enter a valid phone number.</div>
+                            </div>
+
+                            <!-- Date & Time -->
+                            <div class="col-md-6">
+                                <label for="date" class="form-label">Date <span class="req">*</span></label>
+                                <input type="date" class="form-control" id="date" required />
+                                <div class="invalid-feedback">Select a future date.</div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="time" class="form-label">Time <span class="req">*</span></label>
+                                <input type="time" class="form-control" id="time" required />
+                                <div class="invalid-feedback">Select a time.</div>
+                            </div>
+
+
+                            <!-- Notes -->
+                            <div class="col-12">
+                                <label for="notes" class="form-label">Notes <small
+                                        class="text-white">(optional)</small></label>
+                                <textarea class="form-control" id="notes" rows="3"
+                                    placeholder="Any special requests? Fade level, beard style, etc."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="primary-btn rounded">Confirm Booking
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Include LightGallery JS -->
@@ -456,22 +606,40 @@
             selector: 'a'
         });
 
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        const headerOffset = 80; // adjust this based on your header height
-        const elementPosition = target.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition - headerOffset;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
+        lightGallery(document.getElementById('lightgallery2'), {
+            plugins: [lgZoom, lgThumbnail],
+            speed: 500,
+            thumbnail: true,
+            selector: 'a'
         });
-    });
-});
     </script>
- 
+
+
+    <script>
+        $(document).ready(function () {
+            $('.offcanvas-body .nav-link').on('click', function (e) {
+                const target = $(this).attr('href');
+
+                // Close Bootstrap Offcanvas
+                const offcanvas = $('.offcanvas');
+                const offcanvasInstance = bootstrap.Offcanvas.getInstance(offcanvas[0]);
+                if (offcanvasInstance) {
+                    offcanvasInstance.hide();
+                }
+
+                // Smooth scroll to section after offcanvas closes
+                if (target.startsWith('#')) {
+                    e.preventDefault();
+                    setTimeout(function () {
+                        $('html, body').animate({
+                            scrollTop: $(target).offset().top
+                        }, 300); // 600ms smooth scroll
+                    }, 100); // Wait for offcanvas to close
+                }
+            });
+        });
+    </script>
+
 
 </body>
 

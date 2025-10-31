@@ -9,13 +9,22 @@
     .main-banner .caption {
         width: 100%;
     }
+
+    #bg-video {
+        min-height: 70vh;
+    }
 }
 
 @media screen and (min-width:768px) {
-    .office_time {
+    /* .office_time {
         max-width: 253px;
         text-align: start;
         float: inline-end;
+        width: 100%;
+    } */
+
+    .team_img img {
+        height: 350px;
         width: 100%;
     }
 }
