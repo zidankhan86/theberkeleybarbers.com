@@ -13,6 +13,10 @@ ul {
     list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'avenir-black';
     src: url('../fonts/Avenir-Black.eot');
@@ -146,6 +150,46 @@ h6 {
     opacity: 1;
 }
 
+.offcanvas {
+    background: #25272bb3;
+}
+
+.offcanvas ul li a {
+    color: #fff;
+    text-align: center;
+    font-family: 'avenir-Light';
+    font-size: 20px;
+}
+
+.offcanvas ul li a:hover {
+    color: var(--primary);
+}
+
+/* Base offcanvas transition */
+.offcanvas {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+    visibility: hidden;
+}
+
+/* When shown (slides in) */
+.offcanvas.show {
+    transform: translateX(0);
+    visibility: visible;
+}
+
+/* Specifically for left side (offcanvas-start) */
+.offcanvas.offcanvas-start {
+    left: 0;
+    right: auto;
+}
+
+/* Optional – smoother hide animation */
+.offcanvas.hiding {
+    transform: translateX(-100%);
+    visibility: visible;
+}
+
 
 /* 
 ---------------------------------------------
@@ -219,10 +263,7 @@ banner
     margin: auto;
 }
 
-.about_section {
-    padding: 80px 0px;
-}
-
+ 
 .about_content h2 {
     font-size: 36px;
     color: #ffffff;
@@ -251,10 +292,6 @@ banner
 
 .about_content i {
     color: #ffffff;
-}
-
-.team-section {
-    padding-bottom: 70px;
 }
 
 .section_heading h2 {
@@ -336,4 +373,32 @@ banner
     float: right;
     font-weight: 600;
     color: var(--primary);
+}
+
+#lightgallery a {
+    break-inside: avoid;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Masonry grid styling */
+.masonry-gallery {
+    column-count: 4;
+    column-gap: 1rem;
+}
+
+.masonry-gallery a {
+    display: block;
+    margin-bottom: 1rem;
+    break-inside: avoid;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.masonry-gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }

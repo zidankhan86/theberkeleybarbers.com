@@ -15,25 +15,38 @@
     <link href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <style>
-        #lightgallery a {
-            break-inside: avoid;
-            display: block;
-            margin-bottom: 1rem;
+        /* Hover effect */
+        .masonry-gallery a:hover img {
+            transform: scale(1.05);
+            opacity: 0.9;
         }
     </style>
+
 </head>
 
 <body>
 
-
     <header class="header-area header-sticky sticky-top">
         <div class="container">
             <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
+                <div class="col-12 py-3 py-lg-0">
+                    <div class="text-end">
+                        <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-label="Toggle navigation">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"
+                                fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-menu-icon lucide-menu">
+                                <path d="M4 5h16" />
+                                <path d="M4 12h16" />
+                                <path d="M4 19h16" />
+                            </svg>
+                        </button>
+                    </div>
+                    <nav class="main-nav d-none d-lg-block">
                         <ul class="nav">
                             <li class="scroll-to-section"><a href="#home" class="active">Home</a></li>
                             <li class="scroll-to-section"><a href="#about" class="">About Us</a></li>
@@ -49,6 +62,33 @@
         </div>
     </header>
 
+    <!-- Mobile Offcanvas Menu -->
+    <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+        <div class="offcanvas-header">
+            <button type="button" class="btn-close border-0 shadow-none text-reset text-white opacity-100"
+                data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lucide lucide-x-icon lucide-x">
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item scroll-to-section"><a class="nav-link active" href="#home">Home</a></li>
+                <li class="nav-item scroll-to-section"><a class="nav-link" href="#about">About Us</a></li>
+                <li class="nav-item scroll-to-section"><a class="nav-link" href="#service">Services</a></li>
+                <li class="nav-item scroll-to-section"><a class="nav-link" href="#team">Meet the Team</a></li>
+                <li class="nav-item scroll-to-section"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item scroll-to-section"><a class="nav-link" href="#memorabilia">Our Barber
+                        Memorabilia</a></li>
+                <li class="nav-item scroll-to-section"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    </header>
 
     <div class="main-banner" id="home">
         <video autoplay="" muted="" loop="" id="bg-video">
@@ -73,22 +113,24 @@
     </div>
 
     <!-- about us -->
-    <div class="about_section pb-0" id="about">
+    <div class="about_section pb-0 pt-5" id="about">
         <div class="container">
             <div class="row gy-5 gy-lg-0">
 
 
                 <div class="col-lg-6">
                     <div class="inner-column">
+                        <div class="section_heading mb-4">
+                            <h2>About Us</h2>
+                        </div>
                         <div class="image">
                             <img src="assets/image/about-2.png" class="w-100" alt="logo">
                         </div>
                     </div>
                 </div>
 
-
                 <div class="col-lg-6">
-                    <div class="about_content">
+                    <div class="about_content mt-lg-5">
                         <div class="mb-5">
                             <h2>Why do we have a thousand clients a month?</h2>
                             <p class="desc">
@@ -97,7 +139,7 @@
                                 “Old School,” because we adhere to the same values since we first opened our doors:
                             </p>
                         </div>
-                        <div class="mb-4 mb-4">
+                        <div class="mb-5">
                             <h5><i class="fas fa-users me-2"></i>Our clients matter</h5>
                             <p>
                                 We want you comfortable when you visit us. We
@@ -106,7 +148,7 @@
                                 as before or a new look.
                             </p>
                         </div>
-                        <div class="mb-4 mb-4">
+                        <div class="mb-5">
                             <h5><i class="fas fa-smile-beam me-2"></i>We want you 100% satisfied</h5>
                             <p>
                                 each time. Which is why we
@@ -115,7 +157,7 @@
                                 doing for decades – and now we are doing their kids!
                             </p>
                         </div>
-                        <div class="mb-4 mb-4">
+                        <div class="mb-5">
                             <h5><i class="fas fa-handshake me-2"></i>We have a NO-attitude vibe</h5>
                             <p>
                                 Our barbers are talented, lowkey, professional and heart-based. Our clients can relax
@@ -134,7 +176,7 @@
     <div class="service-section pt-5" id="service">
         <div class="container">
             <div class="section_heading mb-5">
-                <h2>Service</h2>
+                <h2>Services</h2>
             </div>
 
             <div class="row gx-lg-5">
@@ -260,14 +302,14 @@
                 <h2>Meet Our Team</h2>
             </div>
 
-            <div class="row gy-3 gy-lg-0">
-                <div class="col-lg-4">
-                    <div class="team_item">
+            <div class="row gy-3 gy-lg-0 text-center text-md-start">
+                <div class="col-md-6 col-lg-4">
+                    <div class="team_item card h-100 border-0 bg-transparent">
                         <div class="mb-3">
                             <img src="assets/image/team1.jpg" class="img-fluid rounded-3" alt="Barber Andrew Helinski">
                         </div>
                         <div class="content">
-                            <h4 class="mb-2">Andrew Helinski <small>(He/Him)</small></h4>
+                            <h4 class="mb-2">Andrew  <small>(He/Him)</small></h4>
                             <p>
                                 With over 10 years of experience, Andrew specializes in modern fades, beard detailing,
                                 and classic cuts.
@@ -279,35 +321,36 @@
                     </div>
                 </div>
 
-                <div class="col-lg-4">
-                    <div class="team_item">
+                <div class="col-md-6 col-lg-4">
+                    <div class="team_item card h-100 border-0 bg-transparent">
                         <div class="mb-3">
                             <img src="assets/image/team2.jpg" class="img-fluid rounded-3" alt="Barber Warren Forgie">
                         </div>
                         <div class="content">
                             <h4 class="mb-2">Warren Forgie <small>(He/Him)</small></h4>
                             <p>
-                                Warren brings creativity and confidence to every haircut. Known for his personalized
-                                consultations,
-                                he ensures each client leaves with a style that fits their personality — from sleek
-                                fades to bold textures.
+                                With over 10 years of experience, Andrew specializes in modern fades, beard detailing,
+                                and classic cuts.
+                                His precision and attention to detail have made him a client favorite for timeless looks
+                                with a modern edge.
                             </p>
                             <a href="#" class="primary-btn bg-transparent">Book Now</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-4">
-                    <div class="team_item">
+                <div class="col-md-6 col-lg-4">
+                    <div class="team_item card h-100 border-0 bg-transparent">
                         <div class="mb-3">
                             <img src="assets/image/team3.jpg" class="img-fluid rounded-3" alt="Barber Kristyn King">
                         </div>
                         <div class="content">
                             <h4 class="mb-2">Kristyn King <small>(She/Her)</small></h4>
                             <p>
-                                Kristyn combines artistry and precision to create clean cuts and flawless styles.
-                                She’s known for her friendly energy and ability to transform any look — from short crops
-                                to stylish shaves.
+                               With over 10 years of experience, Andrew specializes in modern fades, beard detailing,
+                                and classic cuts.
+                                His precision and attention to detail have made him a client favorite for timeless looks
+                                with a modern edge.
                             </p>
                             <a href="#" class="primary-btn bg-transparent">Book Now</a>
                         </div>
@@ -326,47 +369,31 @@
                 <h2>Gallery</h2>
             </div>
 
-            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4" id="lightgallery">
-                <div class="col">
-                    <a href="assets/image/gallery/1.jpg" class="d-block" data-lg-size="1600-1067">
-                        <img src="assets/image/gallery/1.jpg" class="img-fluid rounded" alt="Gallery Image 1">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="assets/image/gallery/2.jpg" class="d-block">
-                        <img src="assets/image/gallery/2.jpg" class="w-100 rounded" alt="Gallery Image 2">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="assets/image/gallery/1.jpg" class="d-block">
-                        <img src="assets/image/gallery/1.jpg" class="w-100 rounded" alt="Gallery Image 3">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="assets/image/gallery/2.jpg" class="d-block">
-                        <img src="assets/image/gallery/2.jpg" class="w-100 rounded" alt="Gallery Image 4">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="assets/image/gallery/1.jpg" class="d-block">
-                        <img src="assets/image/gallery/1.jpg" class="w-100 rounded" alt="Gallery Image 1">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="assets/image/gallery/2.jpg" class="d-block">
-                        <img src="assets/image/gallery/2.jpg" class="w-100 rounded" alt="Gallery Image 2">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="assets/image/gallery/1.jpg" class="d-block">
-                        <img src="assets/image/gallery/1.jpg" class="w-100 rounded" alt="Gallery Image 3">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="assets/image/gallery/2.jpg" class="d-block">
-                        <img src="assets/image/gallery/2.jpg" class="w-100 rounded" alt="Gallery Image 4">
-                    </a>
-                </div>
+            <div id="lightgallery" class="masonry-gallery">
+                <a href="assets/image/gallery/1.jpg">
+                    <img src="assets/image/gallery/1.jpg" alt="Gallery Image 1">
+                </a>
+                <a href="assets/image/gallery/2.jpg">
+                    <img src="assets/image/gallery/2.jpg" alt="Gallery Image 2">
+                </a>
+                <a href="assets/image/gallery/3.jpg">
+                    <img src="assets/image/gallery/3.jpg" alt="Gallery Image 3">
+                </a>
+                <a href="assets/image/gallery/4.jpg">
+                    <img src="assets/image/gallery/4.jpg" alt="Gallery Image 4">
+                </a>
+                <a href="assets/image/gallery/5.jpg">
+                    <img src="assets/image/gallery/5.jpg" alt="Gallery Image 5">
+                </a>
+                <a href="assets/image/gallery/6.jpg">
+                    <img src="assets/image/gallery/6.jpg" alt="Gallery Image 6">
+                </a>
+                <a href="assets/image/gallery/7.jpg">
+                    <img src="assets/image/gallery/7.jpg" alt="Gallery Image 7">
+                </a>
+                <a href="assets/image/gallery/8.jpg">
+                    <img src="assets/image/gallery/8.jpg" alt="Gallery Image 8">
+                </a>
             </div>
         </div>
     </div>
@@ -374,16 +401,15 @@
 
 
     <!-- contact -->
-    <div class="team-section" id="contact">
+    <div class="contact-section py-5" id="contact">
         <div class="container">
             <div class="section_heading mb-5">
                 <h2>Contact</h2>
             </div>
 
-
             <div class="row gy-5 gy-md-0 d-flex justify-content-between text-center text-md-start">
                 <div class="col-md-6">
-                    <div class="contact">
+                    <div class="contact"> 
                         <img src="assets/image/logo.png" class="img-fluid mb-4" alt="Logo">
                         <p>
                             2812 Santa Monica Blvd. <br>
@@ -429,8 +455,23 @@
             thumbnail: true,
             selector: 'a'
         });
-    </script>
 
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        const headerOffset = 80; // adjust this based on your header height
+        const elementPosition = target.getBoundingClientRect().top + window.scrollY;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+    });
+});
+    </script>
+ 
 
 </body>
 

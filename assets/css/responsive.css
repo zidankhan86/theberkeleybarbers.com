@@ -1,3 +1,10 @@
+@media screen and (max-width:1200px) {
+    .header-area .main-nav .nav li {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 @media screen and (max-width:767px) {
     .main-banner .caption {
         width: 100%;
@@ -51,5 +58,23 @@
 
     .primary-btn {
         font-size: 16px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .masonry-gallery {
+        column-count: 3;
+    }
+}
+
+@media (max-width: 768px) {
+    .masonry-gallery {
+        column-count: 2;
+    }
+}
+
+@media (max-width: 576px) {
+    .masonry-gallery {
+        column-count: 1;
     }
 }
